@@ -102,6 +102,10 @@ export default function Home() {
       }
       if (message?.result) {
         setLoading(false);
+
+        if (message.result === "Can't Find Array") {
+          alert("해당 범위의 수열을 찾을 수 없습니다.");
+        }
         setResult(message.result);
       }
       if (message?.searchResult) {
@@ -283,13 +287,13 @@ export default function Home() {
             canvasRef.current,
             ringWrapper.current.children[
               result[i - 1] - 1
-            ].getBoundingClientRect().left + 16,
+            ]?.getBoundingClientRect().left + 16,
             ringWrapper.current.children[
               result[i - 1] - 1
-            ].getBoundingClientRect().top + 16,
-            ringWrapper.current.children[result[i] - 1].getBoundingClientRect()
+            ]?.getBoundingClientRect().top + 16,
+            ringWrapper.current.children[result[i] - 1]?.getBoundingClientRect()
               .left + 16,
-            ringWrapper.current.children[result[i] - 1].getBoundingClientRect()
+            ringWrapper.current.children[result[i] - 1]?.getBoundingClientRect()
               .top + 16,
             "red"
           );
@@ -298,16 +302,16 @@ export default function Home() {
       if (result[0] && ringWrapper.current && canvasRef.current) {
         addLine(
           canvasRef.current,
-          ringWrapper.current.children[result[0] - 1].getBoundingClientRect()
+          ringWrapper.current.children[result[0] - 1]?.getBoundingClientRect()
             .left + 16,
-          ringWrapper.current.children[result[0] - 1].getBoundingClientRect()
+          ringWrapper.current.children[result[0] - 1]?.getBoundingClientRect()
             .top + 16,
           ringWrapper.current.children[
             result[result.length - 1] - 1
-          ].getBoundingClientRect().left + 16,
+          ]?.getBoundingClientRect().left + 16,
           ringWrapper.current.children[
             result[result.length - 1] - 1
-          ].getBoundingClientRect().top + 16,
+          ]?.getBoundingClientRect().top + 16,
           "red"
         );
       }

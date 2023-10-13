@@ -106,7 +106,11 @@ function goodRing(start: number, n_Nodes: number): void {
   initGraph();
   const result = searchHamilton([start]);
   postMessage({ searchResult: searchResult });
-  postMessage({ result: result });
+  if (result) {
+    postMessage({ result: result });
+  } else {
+    postMessage({ result: "Can't Find Array" });
+  }
 }
 
 addEventListener("message", (e) => {
