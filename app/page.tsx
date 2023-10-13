@@ -324,7 +324,7 @@ export default function Home() {
       {loading && (
         <div className="w-full h-screen fixed top-0 flex flex-col justify-center items-center bg-slate-900/80 touch-none z-20">
           <div className="text-xl font-semibold p-2">수열을 찾는중...</div>
-          <Cog6ToothIcon className="w-12 h-12 animate-spin text-slate-700" />
+          <Cog6ToothIcon className="w-12 h-12 animate-spin text-slate-300" />
         </div>
       )}
       {n === 0 && (
