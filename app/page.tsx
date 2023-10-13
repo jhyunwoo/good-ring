@@ -331,7 +331,7 @@ export default function Home() {
         <div className="fixed top-0 w-full h-screen flex justify-center items-center bg-slate-950 z-20 p-4">
           <div className="flex flex-col justify-center items-center w-full max-w-xl">
             <h1 className="text-xl font-bold p-4">
-              수열의 범위를 입력해주세요. (1~50)
+              수열의 범위를 입력해주세요. (1~47)
             </h1>
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -343,7 +343,7 @@ export default function Home() {
                 {...register("nValue", {
                   required: { value: true, message: "범위를 입력하세요." },
                   min: { value: 1, message: "1 이상의 수를 입력하세요." },
-                  max: { value: 50, message: "50 이하의 수를 입력하세요." },
+                  max: { value: 47, message: "47 이하의 수를 입력하세요." },
                 })}
               />
 
