@@ -59,6 +59,7 @@ function goodRing(start: number, n_Nodes: number): void {
   }
 
   let cnt = 0;
+  let prevPathLength: number = 0;
   let searchResult: number[][] = [];
   /**
    * Step 2: 해밀턴 회로 탐색(백트래킹)
@@ -94,8 +95,10 @@ function goodRing(start: number, n_Nodes: number): void {
         // 재귀호출을 거쳐 해밀턴회로를 찾았다면 -> 그대로 return
         if (res != null) {
           return res;
-        } else {
-          searchResult.push(path);
+        } else if (path.length - prevPathLength > 5) {
+          if (Math.floor(Math.random() * n_Nodes * n_Nodes) === 1) {
+            searchResult.push(path);
+          }
         }
       }
     }
