@@ -245,8 +245,26 @@ export default function Home() {
       }
     }
 
-    renderResult();
-  }, [showResult, turn]);
+    if (page !== 3) {
+      renderResult();
+    } else {
+      // canvas 초기화
+      clearCanvas();
+      // 제곱수 연결
+      linkSquaredNodes(canvasRef.current, squareData);
+      // 마지막 최종 결과를 색칠
+      for (let i = 0; i < result.length; i += 1) {
+        setColored((prev) => [...prev, result[i]]);
+        if (result[i - 1] && ringWrapper.current && canvasRef.current) {
+          linkNodes(canvasRef.current, result[i - 1] - 1, result[i] - 1, "red");
+        }
+      }
+      // 마지막 배열의 값과 첫 번째 배열의 값을 연결
+      if (result[0] && ringWrapper.current && canvasRef.current) {
+        linkNodes(canvasRef.current, result[0] - 1, result.length - 1, "red");
+      }
+    }
+  }, [showResult, turn, page]);
 
   useEffect(() => {
     /**

@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Beauty of Math",
   description:
     "서울대생이 흥분한 인접한 수의 합이 모두 제곱수인 자연수 원형 배열 찾기",
+  metadataBase: new URL("https://beautyofmath.moveto.kr"),
   openGraph: {
     title: "Beauty of Math",
     description: "인접한 수의 합이 모두 제곱수인 자연수 원형 배열 찾기",
