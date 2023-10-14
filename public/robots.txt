@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://beautyofmath.moveto.kr
+
+# Sitemaps
+Sitemap: https://beautyofmath.moveto.kr/sitemap.xml

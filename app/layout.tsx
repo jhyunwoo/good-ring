@@ -3,11 +3,11 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "인접한 수가 모두 제곱수!",
+  title: "Beauty of Math",
   description:
     "서울대생이 흥분한 인접한 수의 합이 모두 제곱수인 자연수 원형 배열 찾기",
   openGraph: {
-    title: "인접한 수가 모두 제곱수!",
+    title: "Beauty of Math",
     description: "인접한 수의 합이 모두 제곱수인 자연수 원형 배열 찾기",
     type: "website",
     images: ["/og-image.jpg"],
